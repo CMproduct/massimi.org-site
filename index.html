@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caleb Massimi — Medicine & Technology</title>
+  <meta name="description" content="Physician-in-training exploring intersections of medicine, technology, and health systems." />
+  <meta property="og:title" content="Caleb Massimi" />
+  <meta property="og:description" content="Medicine × Technology × Health Systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://massimi.org/og.png" />
+  <meta name="theme-color" content="#0b0c10" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0c10'/%3E%3Ctext x='50' y='58' font-family='Inter,Segoe UI,system-ui,sans-serif' font-size='56' text-anchor='middle' fill='%237aa2f7'%3ECM%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root{--bg:#0b0c10;--fg:#eaecee;--muted:#a9b1ba;--card:#14161a;--line:#23262b;--accent:#7aa2f7}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 600px at 85% -10%,#1b1e24,var(--bg));color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;display:flex;align-items:center;justify-content:center;padding:24px}
+    .wrap{width:100%;max-width:840px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 28px rgba(0,0,0,.28);padding:28px}
+    h1{margin:0 0 6px;font-size:34px;line-height:1.25}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 24px}
+    .chip{padding:6px 10px;border:1px solid #2a2e35;border-radius:999px;color:#cbd5e1;font-size:14px}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;background:#1f232a;border:1px solid #2a2e35;color:#e6edf3}
+    .btn.primary{background:var(--accent);border-color:transparent;color:#0b1020}
+    .btn:hover{transform:translateY(-1px)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:22px}
+    .tile{border:1px solid var(--line);border-radius:16px;padding:16px;background:#111317}
+    .tile h3{margin:0 0 8px;font-size:18px}
+    .tile p{margin:0;color:#b7bfc9;font-size:14px}
+    footer{margin-top:18px;font-size:14px;color:#8a93a3}
+    footer a{color:#9ab6ff;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" role="main">
+      <h1>Caleb Massimi</h1>
+      <p class="lead">Physician-in-training interested in how medicine, technology, and systems design can improve health outcomes.</p>
+
+      <div class="chips" aria-label="Focus areas">
+        <span class="chip">Medicine</span>
+        <span class="chip">Technology</span>
+        <span class="chip">Health Systems</span>
+      </div>
+
+      <div class="buttons">
+        <a class="btn primary" href="mailto:you@example.com">Email me</a>
+        <a class="btn" href="/Caleb_Resume.pdf">Resume (PDF)</a>
+        <a class="btn" href="https://www.linkedin.com/in/calebmassimi/" rel="me noopener" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://orcid.org/0009-0003-8058-7138" rel="me noopener" target="_blank">ORCID</a>
+      </div>
+
+      <section class="grid" aria-label="Highlights" style="display:block">
+        <div class="tile">
+          <h3>Now</h3>
+          <p>Studying at Icahn; building small tools that reduce friction for clinicians and patients.</p>
+        </div>
+        <div class="tile">
+          <h3>Research</h3>
+          <p>Actigraphy + gait analysis for early neuro detection; reproducible, privacy-conscious methods.</p>
+        </div>
+        <div class="tile">
+          <h3>Writing</h3>
+          <p>Notes on prevention, incentives, and shipping useful healthcare software.</p>
+        </div>
+      </section>
+
+      <footer>
+        If LinkedIn shows a sign‑in wall, try a private window or the button above.
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
