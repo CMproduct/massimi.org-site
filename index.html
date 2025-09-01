@@ -12,12 +12,13 @@
   <meta name="theme-color" content="#0b0c10" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0c10'/%3E%3Ctext x='50' y='58' font-family='Inter,Segoe UI,system-ui,sans-serif' font-size='56' text-anchor='middle' fill='%237aa2f7'%3ECM%3C/text%3E%3C/svg%3E" />
   <style>
-    :root{--bg:#0b0c10;--fg:#eaecee;--muted:#a9b1ba;--card:#14161a;--line:#23262b;--accent:#7aa2f7}
+    :root{--bg:#0b0c10;--fg:#eaecee;--muted:#a9b1ba;--card:#14161a;--line:#23262b;--accent:#f7d87a}
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0;background:radial-gradient(1200px 600px at 85% -10%,#1b1e24,var(--bg));color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;display:flex;align-items:center;justify-content:center;padding:24px}
     .wrap{width:100%;max-width:840px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 28px rgba(0,0,0,.28);padding:28px}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 28px rgba(0,0,0,.28);padding:28px;animation:fadeIn .5s ease-in-out}
     h1{margin:0 0 6px;font-size:34px;line-height:1.25}
     p.lead{margin:0 0 18px;color:var(--muted)}
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 24px}
@@ -27,9 +28,19 @@
     .btn.primary{background:var(--accent);border-color:transparent;color:#0b1020}
     .btn:hover{transform:translateY(-1px)}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:22px}
-    .tile{border:1px solid var(--line);border-radius:16px;padding:16px;background:#111317}
+    .tile{border:1px solid var(--line);border-radius:16px;padding:16px;background:#111317;transition:transform .2s ease-in-out}
+    .tile:hover{transform:scale(1.02)}
     .tile h3{margin:0 0 8px;font-size:18px}
     .tile p{margin:0;color:#b7bfc9;font-size:14px}
+    .currently, .updates { margin-top: 22px; }
+    .currently h2, .updates h2 { font-size: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+    .currently .timestamp { font-size: 14px; color: var(--muted); margin: -4px 0 12px; }
+    .updates ul { list-style: none; padding: 0; margin: 0; }
+    .updates li { margin-bottom: 16px; padding-left: 12px; border-left: 2px solid var(--line); }
+    .updates .date { font-weight: 600; color: var(--fg); display: block; }
+    .updates p { margin: 0; color: var(--muted); }
+    .updates a { color: var(--accent); text-decoration: none; }
+    .updates a:hover { text-decoration: underline; }
     footer{margin-top:18px;font-size:14px;color:#8a93a3}
     footer a{color:#9ab6ff;text-decoration:none}
     footer a:hover{text-decoration:underline}
@@ -54,24 +65,35 @@
         <a class="btn" href="https://orcid.org/0009-0003-8058-7138" rel="me noopener" target="_blank">ORCID</a>
       </div>
 
-      <section class="grid" aria-label="Highlights" style="display:block">
-        <div class="tile">
-          <h3>Now</h3>
-          <p>Studying at Icahn; building small tools that reduce friction for clinicians and patients.</p>
-        </div>
-        <div class="tile">
-          <h3>Research</h3>
-          <p>Actigraphy + gait analysis for early neuro detection; reproducible, privacy-conscious methods.</p>
-        </div>
-        <div class="tile">
-          <h3>Writing</h3>
-          <p>Notes on prevention, incentives, and shipping useful healthcare software.</p>
-        </div>
-      </section>
+      <div class="currently">
+        <h2>Currently</h2>
+        <p class="timestamp"><em>Last updated: August 31, 2025</em></p>
+        <p>Building a small web app to help clinicians track patient-reported outcomes between visits.</p>
+      </div>
 
-      <footer>
-        If LinkedIn shows a sign‑in wall, try a private window or the button above.
-      </footer>
+      <div class="updates">
+        <h2>Recent Updates</h2>
+        <ul>
+          <li>
+            <span class="date">August 2025</span>
+            <p>Began outlining a new research protocol for using smartwatch data to monitor post-operative recovery.</p>
+          </li>
+          <li>
+            <span class="date">July 2025</span>
+            <p>Published a short article on the practical challenges of implementing new software in a clinical setting. <a href="#">[Link to article]</a></p>
+          </li>
+          <li>
+            <span class="date">June 2025</span>
+            <p>Presented findings from my actigraphy and gait analysis project at the Icahn departmental meeting.</p>
+          </li>
+          <li>
+            <span class="date">May 2025</span>
+            <p>Shipped v1 of a tool that helps automate discharge summaries for our team.</p>
+          </li>
+        </ul>
+      </div>
+
+      <footer></footer>
     </main>
   </div>
 </body>
